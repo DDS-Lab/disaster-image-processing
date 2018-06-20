@@ -1,5 +1,6 @@
 # Workflow
-
+Python Version: 2.7
+  
 ### 1. Automated Tiff Downloder
 tiffDownloader.py was taken from Jack Kwok's Neural Road Inspector github repo: https://github.com/jackkwok/neural-road-inspector  
   
