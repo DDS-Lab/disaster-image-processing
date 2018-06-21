@@ -36,9 +36,8 @@ elif sys.argv[1] and sys.argv[2]:
     file_list = sys.argv[1]
     with open(file_list) as f:
         event = sys.argv[2]
-        print ('../data/%s' % event)
-        os.mkdir('../data/@event')
-        os.chdir('../data/@event')
+        os.mkdir('../data/%s' % event)
+        os.chdir('../data/%s' % event)
         content = f.readlines()
         # remove whitespace characters at the end of each line
         content = [x.strip() for x in content]
