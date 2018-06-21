@@ -37,13 +37,13 @@ elif sys.argv[1] and sys.argv[2]:
     with open(file_list) as f:
         event = sys.argv[2]
         print ('../data/%s' % event)
-    #     os.mkdir('../data/@event')
-    #     os.chdir('../data/@event')
-    #     content = f.readlines()
-    #     # remove whitespace characters at the end of each line
-    #     content = [x.strip() for x in content]
-    #     tiffList = filter_list_by_extension(content, '.tif')
-    #     download_files(tiffList)
+        os.mkdir('../data/@event')
+        os.chdir('../data/@event')
+        content = f.readlines()
+        # remove whitespace characters at the end of each line
+        content = [x.strip() for x in content]
+        tiffList = filter_list_by_extension(content, '.tif')
+        download_files(tiffList)
 else:
     print('error: required command line argument missing. \n\n Syntax: python httpDownloader.py <urls_file> '
           '<hurricane_name> \n\n Each URL must be on a new line.')
