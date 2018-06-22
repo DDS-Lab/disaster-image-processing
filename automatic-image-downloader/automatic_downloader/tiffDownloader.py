@@ -1,7 +1,7 @@
-import sys
-import urllib
+import argparse
 import os
 import os.path
+import urllib
 
 
 """
@@ -29,21 +29,20 @@ def filter_list_by_extension(urls, extension):
 
 
 # execution starts here. command line args processing.
-if len(sys.argv) == 2 and sys.argv[1] == '-h':
-    print('\n\n   Usage: python tiffDownloader.py <urls_file> <hurricane_name> \n\n   Each URL must be on a new line.')
-elif sys.argv[1] and sys.argv[2]:
-    os.chdir('../data')
-    file_list = sys.argv[1]
-    with open(file_list) as f:
-        event = sys.argv[2]
-        os.mkdir('../data/%s' % event)
-        os.chdir('../data/%s' % event)
-        content = f.readlines()
-        # remove whitespace characters at the end of each line
-        content = [x.strip() for x in content]
-        tiffList = filter_list_by_extension(content, '.tif')
-        download_files(tiffList)
-else:
-    print('error: required command line argument missing. \n\n Syntax: python httpDownloader.py <urls_file> '
-          '<hurricane_name> \n\n Each URL must be on a new line.')
-    sys.exit(0)
+parser = argparse.ArgumentParser(epilog='Each URL must be on a new line.')
+parser.add_argument('urls', help='add the file name in the ../Data folder here with the list of urls')
+parser.add_argument('hurricane_name', help='identify the hurricane name here to label the output folder in ../Data')
+args = parser.parse_args()
+
+os.chdir('../data')
+file_list = args.urls
+with open(file_list) as f:
+    event = args.hurricane_name
+    os.mkdir('../data/%s' % event)
+    os.chdir('../data/%s' % event)
+    content = f.readlines()
+    # remove whitespace characters at the end of each line
+    content = [x.strip() for x in content]
+    tiffList = filter_list_by_extension(content, '.tif')
+    download_files(tiffList)
+
