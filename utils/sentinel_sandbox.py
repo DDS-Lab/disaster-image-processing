@@ -15,7 +15,7 @@ from os.path import isfile, join
 inputfile = '/Users/Chris/Desktop/hey/dssg/test2.json'
 tiffolder = '/Users/Chris/Desktop/hey/dssg/sample_tiff/'
 image_lat_longs_w_id = '/Users/Chris/Desktop/hey/dssg/tifRange-tiles-run-1.csv'
-onlyfiles = [f for f in listdir(tiffolder) if isfile(join(tiffolder, f))]
+onlyfiles = [f for f in listdir(tiffolder) if isfile(join(tiffolder, f)) and f.endswith('.tif')]
 
 with open(image_lat_longs_w_id, 'r') as f:
 	reader = csv.reader(f)
