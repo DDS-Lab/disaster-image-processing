@@ -1,4 +1,3 @@
-import sentinelhub as stnl
 import numpy as np
 import geopandas as gpd
 from shapely.geometry import shape, Polygon, MultiPolygon, MultiLineString
@@ -7,91 +6,67 @@ from matplotlib.patches import Polygon as plt_polygon
 from fiona.crs import from_epsg
 import csv
 import gdal
+from os import listdir
+from os.path import isfile, join
 
-#from mpl_toolkits.basemap import Basemap  # Avaliable here: https://github.com/matplotlib/basemap
+# Input a <<.json>> file path that has the bounding boxes in the geometry column
+inputfile = '/Users/Chris/Desktop/hey/dssg/lol.json'
 
-inputfile = '/Users/Chris/Desktop/hey/dssg/test2.json'
-# image_lat_longs_w_id = csv.DictReader(open("image_id_ll.csv"))
+# Input a path to a folder of smalltiffs
+tiffolder = '/Users/Chris/Desktop/hey/dssg/sample_tiff/'
+
+# Get a list of all the files in the tiffolder
+onlyfiles = set([f for f in listdir(tiffolder) if isfile(join(tiffolder, f)) and f.endswith('.tif')])
+
+# Set driver so gdal processes know that we are working with geotiffs
 driver = gdal.GetDriverByName('GTiff')
 
-## get id of imag
+# Make a copy of the bounding boxes json file to work with
 geo_json = gpd.read_file(inputfile)
-study_area = geo_json.copy()
+bounding_boxes = geo_json.copy()
 
-
-def getTransform(img_id):
-	dataset = gdal.Open(img_id)
+# Define a function that transforms lat long coordinates into pixels for a given image
+def getTransform(img_id, x_min, y_min, x_max, y_max):
+	path = tiffolder + img_id
+	print(path)
+	dataset = gdal.Open(path)
 	band = dataset.GetRasterBand(1)
-
 	cols = dataset.RasterXSize
 	rows = dataset.RasterYSize
-
 	transform = dataset.GetGeoTransform()
-
 	xOrigin = transform[0]
 	yOrigin = transform[3]
 	pixelWidth = transform[1]
 	pixelHeight = -transform[5]
-	return xOrigin, yOrigin, pixelWidth, pixelHeight, cols, rows
+	data = band.ReadAsArray()
+	xmin = max([0, int((x_min - xOrigin) / pixelWidth)])
+	ymin = max([0, int((yOrigin - y_min ) / pixelHeight)])
+	xmax = max([0, int((x_max - xOrigin) / pixelWidth)])~/
+	ymax = max([0, int((yOrigin - y_max ) / pixelHeight)])
+	return xmin, ymin, xmax, ymax
 
-def convert(xOrigin, yOrigin, pixelWidth, pixelHeight, cols, rows):
-	#data = band.ReadAsArray(0, 0, cols, rows)
-	for point in points_list:
-	    col = int((point[0] - xOrigin) / pixelWidth)
-	    row = int((yOrigin - point[1] ) / pixelHeight)
-    return row,col #, data[row][col]
+# Add to the input geojson a blank column that takes the pixel coordinates of the bounding box 
+geo_json['bb'] = None
 
-
-transformations = {}
-for img_id in image_lat_longs_w_id[ids]:
-	xOrigin, yOrigin, pixelWidth, pixelHeight, cols, rows = getTransform(img_id)
-	transformations[img_id] = [xOrigin, yOrigin, pixelWidth, pixelHeight, cols, rows]
-
-for entry in study_area['geometry']:
-	min_max_coords = [entry.bounds]
-	img_id = entry['img_id']
-	entry['geometry']
-	transform = transformations[img_id]
-	xOrigin = transform[0]
-	yOrigin = transform[1]
-	pixelWidth = transform[2]
-	pixelHeight = transform[3]
-	cols = transform[4]
-	rows = transform[5]
-	convert(xOrigin, yOrigin, pixelWidth, pixelHeight, cols, rows)
-
-
-
-'''
-
-print(study_area['geometry'])
-
-
-'''
-
-# filename = "/home/zeito/pyqgis_data/aleatorio.tif"
-'''
-dataset = gdal.Open(filename)
-band = dataset.GetRasterBand(1)
-
-cols = dataset.RasterXSize
-rows = dataset.RasterYSize
-
-transform = dataset.GetGeoTransform()
-
-xOrigin = transform[0]
-yOrigin = transform[3]
-pixelWidth = transform[1]
-pixelHeight = -transform[5]
-
-data = band.ReadAsArray(0, 0, cols, rows)
-
-for 
-points_list = [ (355278.165927, 4473095.13829), (355978.319525, 4472871.11636) ] #list of X,Y coordinates
-
-for point in points_list:
-    col = int((point[0] - xOrigin) / pixelWidth)
-    row = int((yOrigin - point[1] ) / pixelHeight)
-
-    print row,col, data[row][col]
- '''
+# For every entry in the .geojson with bounding boxes, add to the 'bb'
+# column a conversion from lat long to their 'pixel' coordinates according to their image (smalltif id)
+for index, entry in bounding_boxes.iterrows():
+	min_max_coords = [entry['geometry']]
+	#print(entry['catalog_id'])
+	x, y = min_max_coords[0].exterior.coords.xy
+	#print(x,y)
+	x_min = min(x)
+	y_min = min(y)
+	x_max = max(x)
+	y_max = max(y)
+	#print(x_min, y_min, x_max, y_max)
+	tif_id = entry['tif_id']
+	#print('')
+	#print(index)
+	if tif_id in onlyfiles:
+		pass
+	else:
+		continue
+	out = getTransform(tif_id, x_min, y_min, x_max, y_max)
+	geo_json.loc[index, 'bb'] = str(out)
+	#print(out)
