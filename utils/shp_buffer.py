@@ -13,5 +13,5 @@ distance = float(sys.argv[3])
 
 boundinggeo = input_geo.copy()
 boundinggeo.geometry = [g.buffer(distance, cap_style=3) for g in boundinggeo.geometry]
-outname = sys.argv[2] + '.geojson'
+outname = sys.argv[2]
 boundinggeo.to_file(outname, driver='GeoJSON')
