@@ -9,6 +9,6 @@ import sys
 
 input_geo = gpd.read_file(sys.argv[1])
 
-boundinggeo = input_geo[['geometry']].copy()
+boundinggeo = input_geo.copy()
 boundinggeo.geometry = [g.envelope for g in boundinggeo.geometry]
 boundinggeo.to_file(sys.argv[2])
