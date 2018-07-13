@@ -4,7 +4,7 @@
 
 ### Process Flow
 
-1. [automatic_downloader folder] (https://github.com/DDS-Lab/disaster-damage-detection/tree/master/automatic-image-downloader)
+1. [automatic_downloader folder] (https://github.com/DDS-Lab/disaster-damage-detection/tree/master/automatic-image-downloader "automatic_downloader folder")
 
 	a. [scraper.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/scraper.py)
 	
