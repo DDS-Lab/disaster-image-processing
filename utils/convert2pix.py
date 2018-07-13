@@ -8,12 +8,15 @@ import csv
 import gdal
 from os import listdir
 from os.path import isfile, join
+import sys
+
+# 1st arg is the input path, 2nd argument is the smalltiff folder, 3rd is the output path
 
 # Input a <<.json>> file path that has the bounding boxes in the geometry column
-inputfile = '/Users/Chris/Desktop/hey/dssg/lol.json'
+inputfile = sys.argv[1]
 
 # Input a path to a folder of smalltiffs
-tiffolder = '/Users/Chris/Desktop/hey/dssg/sample_tiff/'
+tiffolder = sys.argv[2]
 
 # Get a list of all the files in the tiffolder
 onlyfiles = set([f for f in listdir(tiffolder) if isfile(join(tiffolder, f)) and f.endswith('.tif')])
@@ -69,4 +72,5 @@ for index, entry in bounding_boxes.iterrows():
 		continue
 	out = getTransform(tif_id, x_min, y_min, x_max, y_max)
 	geo_json.loc[index, 'bb'] = str(out)
-	#print(out)
+
+geo_json.to_file(sys.argv[3])
