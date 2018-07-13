@@ -44,7 +44,7 @@ def getTransform(img_id, x_min, y_min, x_max, y_max):
 	data = band.ReadAsArray()
 	xmin = max([0, int((x_min - xOrigin) / pixelWidth)])
 	ymin = max([0, int((yOrigin - y_min ) / pixelHeight)])
-	xmax = max([0, int((x_max - xOrigin) / pixelWidth)])~/
+	xmax = max([0, int((x_max - xOrigin) / pixelWidth)])
 	ymax = max([0, int((yOrigin - y_max ) / pixelHeight)])
 	return xmin, ymin, xmax, ymax
 
