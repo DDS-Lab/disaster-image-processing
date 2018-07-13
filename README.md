@@ -1,6 +1,6 @@
 # disaster-damage-detection
 
-##Pipeline
+## Pipeline
 
 ### Process Flow
 
