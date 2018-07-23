@@ -4,37 +4,37 @@
 
 ### Process Flow
 
-1. [automatic_downloader folder] (https://github.com/DDS-Lab/disaster-damage-detection/tree/master/automatic-image-downloader)
+1. [automatic_downloader folder](https://github.com/DDS-Lab/disaster-damage-detection/tree/master/automatic-image-downloader)
 
-	a. [scraper.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/scraper.py)
+	a. [scraper.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/scraper.py)
 	
-	b. [tiffDownloader.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/tiffDownloader.py)
+	b. [tiffDownloader.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/tiffDownloader.py)
 
-2. [sort_images.py] (https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)
+2. [sort_images.py](https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)
 
-3. [compressTiffs.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/raster-processing/compressTiffs.py)
+3. [compressTiffs.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/raster-processing/compressTiffs.py)
 
-4. [utils folder] (https://github.com/DDS-Lab/disaster-damage-detection/tree/master/utils)
+4. [utils folder](https://github.com/DDS-Lab/disaster-damage-detection/tree/master/utils)
 
-	a. [concat_layers.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/concat_layers.py)
+	a. [concat_layers.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/concat_layers.py)
 
-	b. [geofunctions.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/geofunctions.py)
+	b. [geofunctions.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/geofunctions.py)
 
-	c. [shp_boundingbox.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/shp_boundingbox.py)
+	c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/shp_boundingbox.py)
 
-	d. [shp_boundingbox2.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/shp_boundingbox2.py)
+	d. [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/shp_boundingbox2.py)
 
-	e. [shp_buffer.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/shp_buffer.py)
+	e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/shp_buffer.py)
 
-5. [filterNoValues.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/raster-processing/filter-no-values/filterNoValues.py)
+5. [filterNoValues.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/raster-processing/filter-no-values/filterNoValues.py)
 
-6. [tileTiff.py] (https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)
+6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)
 
 7. 
 
-8. [index-geojson.ipynb] (https://github.com/DDS-Lab/disaster-damage-detection/blob/Index-geojson-tifs/Index-geojson.ipynb)
+8. [index-geojson.ipynb](https://github.com/DDS-Lab/disaster-damage-detection/blob/Index-geojson-tifs/Index-geojson.ipynb)
 
-9. [convert2pix.py] (https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/convert2pix.py)
+9. [convert2pix.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/master/utils/convert2pix.py)
 
 10.
 11.
