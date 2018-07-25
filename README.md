@@ -1,5 +1,7 @@
 # THIS BRANCH IS FOR CLEANING THE REPO!!!
 
+# Test commit
+
 # disaster-damage-detection
 
 ## Pipeline
@@ -9,7 +11,7 @@
 1. [automatic_downloader folder](https://github.com/DDS-Lab/disaster-damage-detection/tree/master/automatic-image-downloader)
 
 	a. [scraper.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/scraper.py)
-	
+
 	b. [tiffDownloader.py](https://github.com/DDS-Lab/disaster-damage-detection/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/tiffDownloader.py)
 
 2. [sort_images.py](https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)
@@ -32,7 +34,7 @@
 
 6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)
 
-7. 
+7.
 
 8. [index-geojson.ipynb](https://github.com/DDS-Lab/disaster-damage-detection/blob/Index-geojson-tifs/Index-geojson.ipynb)
 
