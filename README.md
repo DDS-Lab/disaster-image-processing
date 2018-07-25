@@ -1,7 +1,5 @@
 # THIS BRANCH IS FOR CLEANING THE REPO!!!
 
-# Test commit
-
 # disaster-damage-detection
 
 ## Pipeline
