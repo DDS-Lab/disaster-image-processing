@@ -1,39 +1,51 @@
-import sys
-import urllib
+import argparse
+import os
 import os.path
-
-# command line tool to easily download a batch of geotiff files (.tif) from
-# DigitalGlobe Open Data Program: http://digitalglobe.com/opendata/
+import urllib
 
 
-def downloadFiles(fileUrlList, overwriteIfExists=False):
-    for fileUrl in fileUrlList:
+"""
+Command line tool to easily download a batch of GeoTIFF files (.tif)
+from DigitalGlobe's Open Data Program: http://digitalglobe.com/opendata/ 
+
+Input files: ../data/list.txt
+Output files: ../data/<hurricane_name>
+"""
+
+
+def download_files(urls, overwrite_if_exists=False):
+    for fileUrl in urls:
         filename = fileUrl[fileUrl.rfind("/")+1:]
-    if overwriteIfExists or not os.path.isfile(filename):
-        opener = urllib.URLopener()
-        opener.retrieve(fileUrl, filename)
-    print('downloaded file: {}'.format(filename))
+        if overwrite_if_exists or not os.path.isfile(filename):
+            opener = urllib.URLopener()
+            opener.retrieve(fileUrl, filename)
+            print('downloaded file: {}'.format(filename))
 
 
-def filterListByExtension(fileUrlList, extension):
+def filter_list_by_extension(urls, extension):
     result = []
-    for fileUrl in fileUrlList:
+    for fileUrl in urls:
         if fileUrl.endswith(extension):
             result.append(fileUrl)
             print('added to queue: {}'.format(fileUrl))
     return result
 
+
 # execution starts here. command line args processing.
-if len(sys.argv) == 2 and sys.argv[1] == '-h':
-    print('\n\n   Usage: python tiffDownloader.py <urls_file> \n\n   Each URL must be on a new line.')
-elif len(sys.argv) > 1:
-    fileWithUrlList = sys.argv[1]
-    with open(fileWithUrlList) as f:
+parser = argparse.ArgumentParser(epilog='Each URL must be on a new line.')
+parser.add_argument('urls', help='add the file name in the ../data folder here with the list of urls')
+parser.add_argument('hurricane_name', help='identify the hurricane name here to label the output folder in ../data')
+args = parser.parse_args()
+
+os.chdir('../data')
+file_list = args.urls
+with open(file_list) as f:
+    event = args.hurricane_name
+    os.mkdir('../data/%s' % event)
+    os.chdir('../data/%s' % event)
     content = f.readlines()
     # remove whitespace characters at the end of each line
     content = [x.strip() for x in content]
-    tiffList = filterListByExtension(content, '.tif')
-    downloadFiles(tiffList)
-else:
-    print('error: required command line argument missing. \n\n Syntax: python httpDownloader.py <urls_file> \n\n Each URL must be on a new line.')
-    sys.exit(0)
+    tiffList = filter_list_by_extension(content, '.tif')
+    download_files(tiffList)
+
