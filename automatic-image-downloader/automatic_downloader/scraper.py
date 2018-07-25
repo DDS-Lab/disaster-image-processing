@@ -12,7 +12,8 @@ output: ../data/list.txt
 """
 
 parser = argparse.ArgumentParser()
-parser.add_argument('event_url', help="indicate the url of the event which you'd like to download images from")
+parser.add_argument('event_url', help="indicate the url of the event which \
+you'd like to download images from")
 args = parser.parse_args()
 
 # query the website and return the html to the variable 'page'
