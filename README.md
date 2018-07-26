@@ -42,7 +42,7 @@
 
 ### 1. Download data from Digital Globe
 
-Scrape the image files from digital globe and saves them in a folder with points
+Scrape the image files from digital globe and save them in a folder with points
 
 ### 2. Sort the image files
 
