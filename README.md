@@ -30,11 +30,11 @@
 
 6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)
 
-7. 
+7. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/tif_index_geojson.py)
 
-8. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/tif_index_geojson.py)
+8. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/convert2pix.py)
 
-9. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/convert2pix.py)
+9. 
 
 10.
 11.
