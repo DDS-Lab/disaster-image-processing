@@ -1,6 +1,6 @@
 import argparse
 import os
-import urllib2
+import requests
 
 from bs4 import BeautifulSoup
 
@@ -17,7 +17,7 @@ you'd like to download images from")
 args = parser.parse_args()
 
 # query the website and return the html to the variable 'page'
-page = urllib2.urlopen(args.event_url)
+page = requests.get(args.event_url)
 # parse the html using beautiful soup and store in variable `soup`
 soup = BeautifulSoup(page, 'html.parser')
 # query out 'textarea' which is the html tag for the links

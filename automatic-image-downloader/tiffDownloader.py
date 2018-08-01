@@ -6,7 +6,7 @@ import urllib
 
 """
 Command line tool to easily download a batch of GeoTIFF files (.tif)
-from DigitalGlobe's Open Data Program: http://digitalglobe.com/opendata/ 
+from DigitalGlobe's Open Data Program: http://digitalglobe.com/opendata/
 
 Input files: ../data/list.txt
 Output files: ../data/<hurricane_name>
@@ -33,8 +33,10 @@ def filter_list_by_extension(urls, extension):
 
 # execution starts here. command line args processing.
 parser = argparse.ArgumentParser(epilog='Each URL must be on a new line.')
-parser.add_argument('urls', help='add the file name in the ../data folder here with the list of urls')
-parser.add_argument('hurricane_name', help='identify the hurricane name here to label the output folder in ../data')
+parser.add_argument('urls', help='add the file name in the ../data folder here \
+with the list of urls')
+parser.add_argument('hurricane_name', help='identify the hurricane name here to\
+ label the output folder in ../data')
 args = parser.parse_args()
 
 os.chdir('../data')
@@ -48,4 +50,3 @@ with open(file_list) as f:
     content = [x.strip() for x in content]
     tiffList = filter_list_by_extension(content, '.tif')
     download_files(tiffList)
-
