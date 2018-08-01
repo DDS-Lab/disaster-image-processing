@@ -1,7 +1,7 @@
 import argparse
 import os
 import os.path
-import urllib
+import urllib3
 
 
 """
@@ -17,7 +17,7 @@ def download_files(urls, overwrite_if_exists=False):
     for fileUrl in urls:
         filename = fileUrl[fileUrl.rfind("/")+1:]
         if overwrite_if_exists or not os.path.isfile(filename):
-            opener = urllib.URLopener()
+            opener = urllib3.URLopener()
             opener.retrieve(fileUrl, filename)
             print('downloaded file: {}'.format(filename))
 
@@ -43,7 +43,8 @@ os.chdir('../data')
 file_list = args.urls
 with open(file_list) as f:
     event = args.hurricane_name
-    os.mkdir('../data/%s' % event)
+    if not os.path.isdir('../data/%s' % event):
+        os.mkdir('../data/%s' % event)
     os.chdir('../data/%s' % event)
     content = f.readlines()
     # remove whitespace characters at the end of each line
