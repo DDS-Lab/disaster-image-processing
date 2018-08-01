@@ -85,10 +85,17 @@ From the csv of lat long ranges per tif image and the geojson file of lat longs 
 
 ### 9. Split training data
 
+Split the images and geojson file into training, validation and test subsets.  8:1:1
+
 ### 10. Debug dataset
+
+Use ipython notebook to plot bounding boxes over the images (tiff files) to check for accuracy
+Render the bounding boxes over the tiff files to manually inspect, record bad labels, remove those bounding boxes from the geojson file
 
 ### 11. Data augmentation
 
+Shift, flip and rotate the images as a way to add more training data
+
 ### 12. Feed training data to algorithm
 
-Start with a small network to tune parameters, then switch to a larger networks
+Prepare input for the network
