@@ -32,7 +32,7 @@
 
 7. 
 
-8. [index-geojson.ipynb](https://github.com/DDS-Lab/disaster-image-processing/blob/Index-geojson-tifs/Index-geojson.ipynb)
+8. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/tif_index_geojson.py)
 
 9. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/convert2pix.py)
 
