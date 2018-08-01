@@ -52,7 +52,7 @@
 
 11. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)
 
-12. 	a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)
+12. a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)
 	
 	b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)
 	
