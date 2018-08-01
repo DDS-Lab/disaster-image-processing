@@ -1,4 +1,4 @@
-# disaster-damage-detection
+# disaster-image-processing
 
 ## Pipeline
 
