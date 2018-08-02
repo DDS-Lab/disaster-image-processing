@@ -31,3 +31,6 @@
         List of removed of bounding boxes (from An))
 
 6. The processed data is available via the PostGIS Server:  
+
+Data organization
+
