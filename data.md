@@ -37,6 +37,6 @@
 project_folder/    
       |- data/
          |- url_tif_list.txt
-         |- all_images_directory/
-         |- nonthreeband_images_directory/
+         |- digitalglobe_images_directory/
+         |- onebanded_digitalglobe_images/
          |- 
