@@ -9,6 +9,9 @@ Command line tool to scape the list of GeoTIFF file (.tif) download links
 from DigitalGlobe Open Data Program: http://digitalglobe.com/opendata/
 
 output: ../data/list.txt
+
+usage: 
+python scraper.py https://www.digitalglobe.com/opendata/hurricane-harvey/post-event
 """
 
 
