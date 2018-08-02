@@ -36,5 +36,5 @@
 
 |- data/
 
-   |- url_tif_list.txt
+  |- url_tif_list.txt
     
