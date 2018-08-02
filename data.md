@@ -35,5 +35,6 @@
 # Data organization
 
 |- data/
+    
     |- url_tif_list.txt
     
