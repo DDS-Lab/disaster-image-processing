@@ -8,6 +8,9 @@ from bs4 import BeautifulSoup
 Command line tool to scape the list of GeoTIFF file (.tif) download links
 from DigitalGlobe Open Data Program: http://digitalglobe.com/opendata/
 
+This script only scrapes for the hurricane you select.
+
+input: url of the hurricane tif links
 output: ../data/list.txt
 
 usage: 
