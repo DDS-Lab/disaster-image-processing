@@ -11,7 +11,7 @@ from DigitalGlobe Open Data Program: http://digitalglobe.com/opendata/
 This script only scrapes either pre-event or post-event for the hurricane you select.
 
 input: url of the hurricane tif links
-output: ../data/list.txt
+output: ../data/url_tif_list.txt
 
 usage: 
 python scraper.py https://www.digitalglobe.com/opendata/hurricane-harvey/post-event
@@ -35,8 +35,8 @@ def get_img_links(page_url):
     no_return_error(links)
 
     os.chdir('../data/')
-    # write out to ../data/list.txt
-    with open('list.txt', 'w+') as text_file:
+    # write out to ../data/url_tif_list.txt
+    with open('url_tif_list.txt', 'w+') as text_file:
         for i in links:
             text_file.write(i.contents[0])
 
