@@ -1,6 +1,6 @@
 # disaster-image-processing
 
-## Pipeline
+This is the pipeline for downloading the images from the source website, processing the images and preparing the training, validation and test data for training the model in tensorflow.
 
 ### Process Flow
 
