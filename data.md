@@ -32,5 +32,8 @@
 
 6. The processed data is available via the PostGIS Server:  
 
-Data organization
+# Data organization
 
+|- data/
+    |- url_tif_list.txt
+    
