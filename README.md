@@ -63,7 +63,7 @@ Scrape the image files from digital globe and save them in a folder with points
 
 ### 2. Sort the image files
 
-Separate 3 band and 1 band images into folders
+Separate 3 band and 1 band images into folders so that the 3 band image files can be used and the 1 band images removed
 
 ### 3. Compress images
 
