@@ -34,7 +34,9 @@
 
 # Data organization
 
-|- data/
-
-  |- url_tif_list.txt
-    
+project_folder/    
+      |- data/
+         |- url_tif_list.txt
+         |- /
+         |- 
+         |- 
