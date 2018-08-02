@@ -8,7 +8,7 @@
 
       https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data
 
-(documentation of how that was manipulated)
+      (documentation of how that was manipulated)
 
 2. Parcel data was collected by contacting each County Appraisal District Office and can be accessed here: 
 
@@ -26,8 +26,8 @@
 
       https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690
 
-(Include our geojson file and what we’ve changed
-Manually removed data
-List of removed of bounding boxes (from An))
+      (Include our geojson file and what we’ve changed
+        Manually removed data
+        List of removed of bounding boxes (from An))
 
 6. The processed data is available via the PostGIS Server:  
