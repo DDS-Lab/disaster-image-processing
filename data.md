@@ -12,7 +12,7 @@
 
 2. Parcel data was collected by contacting each County Appraisal District Office and can be accessed here: 
 
-      https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-  %20Sheet1.csv
+      https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv
 
 3. Data with flood maps and ground truth damages was collected from the Federal Emergency Management Agency (FEMA) here:  
 
