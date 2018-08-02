@@ -1,17 +1,31 @@
 # Data documentation
 
-https://data.femadata.com/NationalDisasters/
+1. The data used in this project was derived from the Digital Globe Open Data Program under Creative Commons 4.0 License
 
-Parcel data spreadsheet
+    a. Large tif images were downloaded from here:  https://www.digitalglobe.com/opendata/hurricane-harvey/post-event
 
-https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release
+    b. The geojson with vector damage data crowdsourced through Tomnod (TOMNOD20170915) was found here: 
 
-https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690
+        https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data
 
-The data was derived from the Digital Globe Open Data Program under Creative Commons 4.0 License
-DG - Open data program geojson - documentation of how that was manipulated
-Include our geojson file and what we’ve changed
+(documentation of how that was manipulated)
+
+2. Parcel data was collected by contacting each 
+
+3. Data with flood maps and ground truth damages was collected from the Federal Emergency Management Agency (FEMA) here:  
+
+        https://data.femadata.com/NationalDisasters/
+
+4. Building footprints were retrieved from Microsoft here:  
+
+        https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release
+
+5. Aerial imagery data was collected from the National Oceanic and Atmospheric Association:  
+
+        https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690
+
+(Include our geojson file and what we’ve changed
 Manually removed data
-List of removed of bounding boxes (from An)
+List of removed of bounding boxes (from An))
 
-PostGIS Server link
+6. The processed data is available via the PostGIS Server:  
