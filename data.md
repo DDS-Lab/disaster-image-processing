@@ -37,6 +37,6 @@
 project_folder/    
       |- data/
          |- url_tif_list.txt
-         |- old_directory/
-         |- new_directory
+         |- all_images_directory/
+         |- nonthreeband_images_directory/
          |- 
