@@ -10,7 +10,7 @@
 
 (documentation of how that was manipulated)
 
-2. Parcel data was collected by contacting each 
+2. Parcel data was collected by contacting each County Appraisal District Office and can be accessed here: 
 
 3. Data with flood maps and ground truth damages was collected from the Federal Emergency Management Agency (FEMA) here:  
 
