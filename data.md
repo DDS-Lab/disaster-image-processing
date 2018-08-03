@@ -42,3 +42,9 @@ project_folder/
          |- layer1.shp
          |- layer2.shp
          |- mergedlayer.shp
+         |-
+         |-
+         |-
+         |- tifffolder/
+         |- geojson of bounding boxes geometry and image id
+         |- geojson of bounding boxes with pixel bounds in a string column
