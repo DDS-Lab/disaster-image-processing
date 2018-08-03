@@ -39,4 +39,6 @@ project_folder/
          |- url_tif_list.txt
          |- digitalglobe_images_directory/
          |- onebanded_digitalglobe_images/
-         |- 
+         |- layer1.shp
+         |- layer2.shp
+         |- mergedlayer.shp
