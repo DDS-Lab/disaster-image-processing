@@ -1,14 +1,16 @@
+import numpy as np
+from osgeo import gdal
 import argparse
 import os
 import csv
 
 
-def isRasterEmpty(file):
-    dataset = gdal.Open(file)
-    raster_band = dataset.GetRasterBand(1)
-    array = np.array(raster_band.ReadAsArray())
+def is_raster_empty(file):
+    raster = gdal.Open(file)
+    raster_band = raster.GetRasterBand(1)
+    band_array = np.array(raster_band.ReadAsArray())
 
-    if np.max(array) > 0:
+    if np.max(band_array) > 0:
         print("OK")
         empty = False
     else:
@@ -18,13 +20,13 @@ def isRasterEmpty(file):
     return empty
 
 
-
-def areRastersEmpty(directory):
+def are_rasters_empty(directory):
     total_list = []
 
     for file in os.listdir(directory):
-        empty = isRasterEmpty(directory + "/" + file)
-        if empty == True:
+        empty = is_raster_empty(directory + "/" + file)
+
+        if empty:
             result = "Problem"
         else:
             result = "OK"
@@ -34,33 +36,37 @@ def areRastersEmpty(directory):
     return total_list
 
 
-def createList(list):
+def create_file_list(list):
 
     with open("novalues_list.csv", "w") as f:
         wr = csv.writer(f)
         wr.writerows(list)
 
 
-
-def deleteFiles(file_list):
+def delete_files(file_list):
 
     for file in file_list:
         command = "rm %s" % file
         os.system(command)
 
-def deleteFile(file):
+
+def delete_file(file):
 
     command = "rm %s" % file
     os.system(command)
 
 
-def delete
-
+def move_file(filename, folderpath):
+    """
+    Moves a file to a new folder
+    """
+    os.system("mv " + filename + " " + folderpath)
 
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(epilog='Type in directory of TIFs with this script in the parent directory.')
+    parser = argparse.ArgumentParser(epilog='Type in directory of TIFs with\
+    this script in the parent directory.')
     parser.add_argument('directory', help='The directory that the TIFs are in')
     args = parser.parse_args()
 
@@ -68,10 +74,7 @@ if __name__ == "__main__":
 
     for filename in directory:
         file = directory + "/" + filename
-        if isRasterEmpty(file):
-            deleteFile(file)
+        if is_raster_empty(file):
+            delete_file(file)
         else:
             continue
-
-
-

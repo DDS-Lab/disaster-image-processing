@@ -2,7 +2,8 @@ import glob
 import os
 import argparse
 
-def gdalwarpMosaic(directory_name):
+
+def gdalwarp_mosaic(directory_name):
     file_list = glob.glob(directory_name + "/*.tif")
     files_string = " ".join(file_list)
 
@@ -13,7 +14,7 @@ def gdalwarpMosaic(directory_name):
     os.system(command1)
 
 
-def gdalmergeMosaic(directory_name):
+def gdalmerge_mosaic(directory_name):
     file_list = glob.glob(directory_name + "/*.tif")
     files_string = " ".join(file_list)
 
@@ -21,7 +22,7 @@ def gdalmergeMosaic(directory_name):
     os.system(command)
 
 
-def gdalvrtMosaic(directory_name):
+def gdalvrt_mosaic(directory_name):
     file_list = glob.glob(directory_name + "/*.tif")
     files_string = " ".join(file_list)
 
@@ -34,7 +35,6 @@ def gdalvrtMosaic(directory_name):
 
 if __name__ == "__main__":
 
-
     parser = argparse.ArgumentParser(epilog='Type in directory of TIFs with this script in the parent directory.')
     parser.add_argument('directory', help='The directory that the TIFs are in')
     parser.add_argument('method', help='Warp, Merge, or Build VRT and Translate')
@@ -44,10 +44,10 @@ if __name__ == "__main__":
     method_name = args.method
 
     if method_name == "warp":
-        gdalwarpMosaic(directory_name)
+        gdalwarp_mosaic(directory_name)
     if method_name == "merge":
-        gdalmergeMosaic()
+        gdalmerge_mosaic(directory_name)
     if method_name == "vrt":
-        gdalvrtMosaic()
+        gdalvrt_mosaic(directory_name)
     else:
         print("Please provide a method")

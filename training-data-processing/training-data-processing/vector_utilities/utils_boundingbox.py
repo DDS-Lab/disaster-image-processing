@@ -25,4 +25,3 @@ if __name__ == "__main__":
     new_file = arguments.new_file
 
     createBoundingBoxes(file_path, new_file)
-

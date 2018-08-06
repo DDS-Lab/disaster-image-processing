@@ -2,19 +2,13 @@ import os
 import argparse
 
 
-
-
-def assignCRS(raster, epsg=4326):
+def assign_crs(raster, epsg=4326):
 
     epsg = str(epsg)
     raster_in = raster
     raster_out = raster.split(".")[0] + "_reprojected_" + epsg + ".tif"
     command = "gdal_translate -a_srs EPSG:%s %s %s" % (epsg, raster_in, raster_out)
     os.system(command)
-
-
-
-
 
 
 if __name__ == "__main__":
@@ -29,5 +23,4 @@ if __name__ == "__main__":
 
     for filename in os.listdir(directory):
         file = directory + "/" + filename
-        assignCRS(file, epsg)
-
+        assign_crs(file, epsg)

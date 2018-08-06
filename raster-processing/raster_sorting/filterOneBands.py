@@ -47,7 +47,7 @@ if __name__ == "__main__":
     Usage:
     ------
 
-    python fileOneBands.py ../data/digitalglobe_images ../data/onebanded_digitalglobe_images
+    python fileOneBands.py ../data/dg_images ../data/onebanded_dg_images
 
     """
     parser = argparse.ArgumentParser('Specify directory to remove non three\
