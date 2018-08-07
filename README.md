@@ -69,6 +69,8 @@ Separate 3 band and 1 band images into folders so that the 3 band image files ca
 
 ### 4. Create bounding boxes
 
+For x issue apply y script
+
 Using points in shapefile format produce a geojson with .00015 buffer around bounding boxes
 
 ### 5. Remove images that are completely NA
