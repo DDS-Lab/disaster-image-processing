@@ -12,18 +12,11 @@
 
 *Parcel data was collected by contacting each County Appraisal District Office
 
-3. Data with flood maps and ground truth damages was collected from the Federal Emergency Management Agency (FEMA) here:  
+(Include our geojson file and what we’ve changed
+  Manually removed data
+  List of removed of bounding boxes (from An))
 
-      https://data.femadata.com/NationalDisasters/
-
-
-
-
-      (Include our geojson file and what we’ve changed
-        Manually removed data
-        List of removed of bounding boxes (from An))
-
-6. The processed data is available via the PostGIS Server:  
+The processed data is available via the PostGIS Server:  
 
 # Data organization
 
