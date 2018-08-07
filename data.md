@@ -2,7 +2,7 @@
 
 | Data Type| Source|Generation Method|Format|File Size Order|License|
 | -------------- | ----------- | ------------ | ------------- |-------------- | ------------- |
-| Imagery|[DigitalGlobe](https://www.digitalglobe.com/opendata/hurricane-harvey/post-event)| Satellite(RGB)|GeoTIFF| |
+| Imagery|[DigitalGlobe](https://www.digitalglobe.com/opendata/hurricane-harvey/post-event)| Satellite(RGB)|GeoTIFF|Creative Commons 4.0|
 | Imagery|[NOAA](https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690) | Aerial(RGB) | GeoTIFF| |
 | Damage Annotations|[TOMNOD](https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data)|Crowdsourced|GeoJSON| |
 | Damage Annotations|[FEMA](https://data.femadata.com/NationalDisasters/)|Assessed by FEMA|shapefile| |
