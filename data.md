@@ -2,9 +2,9 @@
 
 | Data Type| Source|Generation Method|Format|File Size Order|License|
 | -------------- | ----------- | ------------ | ------------- |-------------- | ------------- |
-| Imagery|[DigitalGlobe](https://www.digitalglobe.com/opendata/hurricane-harvey/post-event)| Satellite(RGB)|GeoTiff| |
-| Imagery|[NOAA](https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690) | Aerial(RGB) | GeoTiff| |
-| Damage Annotations|[TOMNOD](https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data)|Crowdsourced|geojson| |
+| Imagery|[DigitalGlobe](https://www.digitalglobe.com/opendata/hurricane-harvey/post-event)| Satellite(RGB)|GeoTIFF| |
+| Imagery|[NOAA](https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690) | Aerial(RGB) | GeoTIFF| |
+| Damage Annotations|[TOMNOD](https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data)|Crowdsourced|GeoJSON| |
 | Damage Annotations|[FEMA](https://data.femadata.com/NationalDisasters/)|Assessed by FEMA|shapefile| |
 | Building Footprints|[Oak Ridge National Lab](https://data.femadata.com/NationalDisasters/)|Proprietary Algorithm|shapefile||
 | Building Footprints|[Microsoft](https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release)| Proprietary Algorithm|shapefile| |
