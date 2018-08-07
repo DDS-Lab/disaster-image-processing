@@ -1,5 +1,14 @@
 # Data documentation
 
+| Data Type           | Source                  |  Type          |  Link
+| ------------------- | ----------------------- | -------------- | ---------------
+| Imagery             | DigitalGlobe            | Satellite(RGB) | https://www.digitalglobe.com/opendata/hurricane-harvey/post-event
+| Imagery             | NOAA                    | Aerial(RGB)    |
+| Damage Annotations  | TOMNOD                  | Crowdsourced   |
+| Damage Annotations  | FEMA                    | Assessed       |
+| Building Footprints | Oak Ridge National Lab  |                |
+| Building Footprints | Microsoft               |                |
+
 1. The data used in this project was derived from the Digital Globe Open Data Program under Creative Commons 4.0 License
 
     a. Large tif images were downloaded from here:  https://www.digitalglobe.com/opendata/hurricane-harvey/post-event
