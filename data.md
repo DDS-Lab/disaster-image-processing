@@ -8,19 +8,11 @@
 | Damage Annotations|[FEMA](https://data.femadata.com/NationalDisasters/)|Assessed by FEMA|Vector|~20 MB|[US Government Works](https://www.usa.gov/government-works)|
 | Building Footprints|[Oak Ridge National Lab](https://data.femadata.com/NationalDisasters/)|Proprietary Algorithm|Vector|~2 GB|[US Government Works](https://www.usa.gov/government-works)|
 | Building Footprints|[Microsoft](https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release)| Proprietary Algorithm|Vector|~3 GB|Open Data Commons Open Database License|
-|Parcel Data|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)|Assessed by Appraisers|Vector|~1 GB|Variable|
+|Parcel Data|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)^|Assessed by Appraisers|Vector|~1 GB|Variable|
 
-1. The data used in this project was derived from the Digital Globe Open Data Program under Creative Commons 4.0 License
 
-    a. Large tif images were downloaded from here:  https://www.digitalglobe.com/opendata/hurricane-harvey/post-event
 
-    b. The geojson with vector damage data crowdsourced through Tomnod (TOMNOD20170915) was found here: 
-
-      https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data
-
-      (documentation of how that was manipulated)
-
-2. Parcel data was collected by contacting each County Appraisal District Office and can be accessed here: 
+^Parcel data was collected by contacting each County Appraisal District Office and can be accessed here: 
 
       https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv
 
