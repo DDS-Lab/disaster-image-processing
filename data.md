@@ -12,7 +12,7 @@
 
 *Parcel data was collected by contacting each County Appraisal District Office
 
-(Include our geojson file and what we’ve changed
+  (Include our geojson file and what we’ve changed
   Manually removed data
   List of removed of bounding boxes (from An))
 
