@@ -8,7 +8,7 @@
 | Damage Annotations|[FEMA](https://data.femadata.com/NationalDisasters/)|Assessed by FEMA|Vector|~20 MB|[US Government Works](https://www.usa.gov/government-works)|
 | Building Footprints|[Oak Ridge National Lab](https://data.femadata.com/NationalDisasters/)|Proprietary Algorithm|Vector|~2 GB|[US Government Works](https://www.usa.gov/government-works)|
 | Building Footprints|[Microsoft](https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release)| Proprietary Algorithm|Vector|~3 GB|Open Data Commons Open Database License|
-|Parcel Data|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)<sup>superscript</sup> Parcel data was collected by contacting each County Appraisal District Office.|Assessed by Appraisers|Vector|~1 GB|Variable|
+|Parcel Data|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)<sup>subscript</sup> Parcel data was collected by contacting each County Appraisal District Office.|Assessed by Appraisers|Vector|~1 GB|Variable|
 
 
 
