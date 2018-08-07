@@ -1,6 +1,6 @@
 # Data documentation
 
-| Data Type           | Source                     |Generation Method               |
+| Data Type| Source|Generation Method|
 | -------------- | ----------- | ------------ |
 | Imagery             | [DigitalGlobe](https://www.digitalglobe.com/opendata/hurricane-harvey/post-event)               | Satellite(RGB)    | 
 | Imagery             | [NOAA](https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690)                       | Aerial(RGB)    | 
