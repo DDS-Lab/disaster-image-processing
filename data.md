@@ -3,12 +3,12 @@
 | Data Type| Source|Generation Method|Format|File Size Order|License|
 | -------------- | ----------- | ------------ | ------------- |-------------- | ------------- |
 | Imagery|[DigitalGlobe](https://www.digitalglobe.com/opendata/hurricane-harvey/post-event)| Satellite(RGB)|GeoTIFF|1 TB|Creative Commons 4.0|
-| Imagery|[NOAA](https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690)|Aerial(RGB)|GeoTIFF|60 GB|
+| Imagery|[NOAA](https://storms.ngs.noaa.gov/storms/harvey/index.html#7/28.400/-96.690)|Aerial(RGB)|GeoTIFF|60 GB||
 | Damage Annotations|[TOMNOD](https://www.digitalglobe.com/opendata/hurricane-harvey/vector-data)|Crowdsourced|Vector|1 MB|
 | Damage Annotations|[FEMA](https://data.femadata.com/NationalDisasters/)|Assessed by FEMA|Vector|20 MB|
 | Building Footprints|[Oak Ridge National Lab](https://data.femadata.com/NationalDisasters/)|Proprietary Algorithm|Vector|2 GB|
-| Building Footprints|[Microsoft](https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release)| Proprietary Algorithm|Vector|3 GB|
-|Parcel Data|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)|Assessed by Appraisers|Vector|1 GB|
+| Building Footprints|[Microsoft](https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release)| Proprietary Algorithm|Vector|3 GB|Open Data Commons Open Database License|
+|Parcel Data|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)|Assessed by Appraisers|Vector|1 GB|Open Data|
 
 1. The data used in this project was derived from the Digital Globe Open Data Program under Creative Commons 4.0 License
 
