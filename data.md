@@ -8,7 +8,7 @@
 | Damage Annotations  | FEMA                       | Assessed       | https://data.femadata.com/NationalDisasters/
 | Building Footprints | Oak Ridge National Lab     |                |
 | Building Footprints | Microsoft                  |                | https://github.com/Microsoft/Open-Maps/wiki/Microsoft-Building-Footprint-Release
-| Parcel Data         | County Appraisal Districts |                | https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv
+| Parcel Data         | County Appraisal Districts | Assessed       | https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv
 
 1. The data used in this project was derived from the Digital Globe Open Data Program under Creative Commons 4.0 License
 
