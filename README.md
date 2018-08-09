@@ -73,6 +73,7 @@ Takes image files that are 3 TB and compresses to 60 GB
 
 [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/concat_layers.py) takes any number of shapefiles as arguments and outputs a merged
 
+transforms lat long coordinates into pixels for a given image and creates bounding boxes 
 
 shapefile containing the features of both.
 
