@@ -11,6 +11,7 @@
 |Parcel Data<sup>**</sup>|[Affected County Appraisal Districts](https://github.com/DDS-Lab/disaster-image-processing/blob/master/Parcel%20Data%20for%20Affected%20Counties%20-%20Sheet1.csv)|Assessed by Appraisers|Vector|~1 GB|Variable|
 
 *Damage annotations from TOMNOD are collected through crowdsourcing and vary in quality, so visual inspection is recommended for preparing training data
+
 **Parcel data was collected by contacting each County Appraisal District Office
 
   (Include our geojson file and what we’ve changed
