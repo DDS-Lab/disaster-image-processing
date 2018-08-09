@@ -73,11 +73,7 @@ Takes image files that are 3 TB and compresses to 60 GB
 
 [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/concat_layers.py) takes any number of shapefiles as arguments and outputs a merged
 
-[geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/geofunctions.py),[shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py),[shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox2.py),[shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py) transform lat long coordinates into pixels for a given image and can input a shapefile and create bounding boxes of each feature with a buffer size
-
-
-
-Using points in shapefile format produce a geojson with .00015 buffer around bounding boxes
+[geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/geofunctions.py), [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py), [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox2.py), [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py) transform lat long coordinates into pixels for a given image and can input a shapefile and creates a geojson with .00015 buffer around bounding boxes of each feature
 
 ### 5. Remove images that are completely NA
 
