@@ -89,7 +89,7 @@ From the csv of lat long ranges per tif image and the geojson file of lat longs 
 
 ### 8. Convert lat long to pixel coordinates
 
-SSD requires the the training data input as pixel coordinates
+SSD requires the training data input as pixel coordinates
 
 ### 9. Split training data
 
