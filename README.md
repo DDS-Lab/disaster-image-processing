@@ -12,7 +12,7 @@ This is the pipeline for downloading the images from the source website, process
 
 2. [sort_images.py](https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)
 
-3. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/compressTiffs.py)
+3. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_utilities/compressTiffs.py)
 
 4. [utils folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/utils)
 
