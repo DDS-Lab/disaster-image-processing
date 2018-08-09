@@ -26,7 +26,7 @@ This is the pipeline for downloading the images from the source website, process
 
 	e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py)
 
-5. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/filter-no-values/filterNoValues.py)
+5. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_sorting/filterNoValues.py)
 
 6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)
 
