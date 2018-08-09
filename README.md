@@ -67,6 +67,8 @@ Separate 3 band and 1 band images into folders so that the 3 band image files ca
 
 ### 3. Compress images
 
+Takes image files that are 3 TB and compresses to 60 GB
+
 ### 4. Create bounding boxes
 
 For x issue apply y script
@@ -74,6 +76,8 @@ For x issue apply y script
 Using points in shapefile format produce a geojson with .00015 buffer around bounding boxes
 
 ### 5. Remove images that are completely NA
+
+This reduces the size of our training data and also avoids confusing our model training since these images would be assigned a value regardless of whether there is a image data
 
 ### 6. Tile images
 
