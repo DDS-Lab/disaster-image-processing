@@ -87,7 +87,9 @@ Clip the big tif images into smaller tiles (2048 x 2048) from left to right and 
 
 From the csv of lat long ranges per tif image and the geojson file of lat longs of bounding boxes with attached tif id produce a geojson of pixel ranges per bounding box with small tif id
 
-### 8. Convert lat long to point coordinates
+### 8. Convert lat long to pixel coordinates
+
+SSD requires the the training data input as pixel coordinates
 
 ### 9. Split training data
 
