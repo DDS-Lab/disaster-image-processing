@@ -97,8 +97,7 @@ Split the images and geojson file into training, validation and test subsets.  8
 
 ### 10. Debug dataset
 
-Use ipython notebook to plot bounding boxes over the images (tiff files) to check for accuracy
-Render the bounding boxes over the tiff files to manually inspect, record bad labels, remove those bounding boxes from the geojson file
+Use ipython notebook to plot bounding boxes over the images (tiff files) to check for accuracy, render the bounding boxes over the tiff files to manually inspect, record bad labels, remove those bounding boxes from the geojson file
 
 ### 11. Data augmentation
 
