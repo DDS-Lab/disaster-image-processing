@@ -1,9 +1,13 @@
 # disaster-image-processing
 
-This is the pipeline for downloading the images from the DigitalGlobe website, processing the images and preparing the training, validation and test data for training the model in tensorflow.
+This is the pipeline for processing the image data, tiling the images, preparing the training data and training the model.  There are separate processes for DigitalGlobe data and for NOAA data.  More details on the data used for this project can be found here:  
+
+downloading the images from the DigitalGlobe website, processing the images and preparing the training, validation and test data for training the model in tensorflow.
 
 ### Process Flow
 
+| DigitalGlobe | NOAA |
+| ------------ | -------------|
 1. [automatic_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/automatic-image-downloader)
 
 	a. [scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/automatic-image-downloader/scripts/scraper.py)
@@ -54,7 +58,7 @@ This is the pipeline for downloading the images from the DigitalGlobe website, p
 
 12. a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)
 	
-	b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)
+	b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|
 	
 
 ### 1. Download data from Digital Globe
@@ -105,4 +109,4 @@ Shift, flip and rotate the images as a way to add more training data
 
 ### 12. Feed training data to algorithm
 
-Prepare input for the network
+Prepare input for the network|
