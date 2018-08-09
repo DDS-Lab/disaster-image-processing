@@ -71,7 +71,10 @@ Takes image files that are 3 TB and compresses to 60 GB
 
 ### 4. Create bounding boxes
 
-For x issue apply y script
+[concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/concat_layers.py) takes any number of shapefiles as arguments and outputs a merged
+
+
+shapefile containing the features of both.
 
 Using points in shapefile format produce a geojson with .00015 buffer around bounding boxes
 
