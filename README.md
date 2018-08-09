@@ -6,7 +6,7 @@ This is the pipeline for processing the image data, tiling the images, preparing
 
 | DigitalGlobe | NOAA |
 | --------------------- | --------------------|
-|1. [automatic_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/automatic-image-downloader)
+|1. [automatic_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/automatic-image-downloader)|1. [automatic_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/automatic-image-downloader)|
 a. [scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/automatic-image-downloader/scripts/scraper.py)
 b. [tiffDownloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/tiffDownloader.py)|
 |2. [sort_images.py](https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)|
