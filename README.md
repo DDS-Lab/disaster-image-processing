@@ -16,39 +16,22 @@ a. [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/
 b. [geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/geofunctions.py)
 c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py)
 d. [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox2.py)
-
 e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py)|
-
 |5. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_sorting/filterNoValues.py)|
-
 |6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)|
-
 |7. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/tif_index_geojson.py)|
-
 |8. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/convert2pix.py)|
-
 |9. a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)
-	
 b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|
-
 |10.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)
-	
 b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)
-	
 c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)
-	
 d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)
-	
 e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)
-	
-f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|
-
-|11. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|
-
+f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)
+|11. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)
 |12. a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)
-	
 b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|
-
 | ### 1. Download data from Digital Globe
 
 Scrape the image files from digital globe and save them in a folder with points
