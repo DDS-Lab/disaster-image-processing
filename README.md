@@ -14,9 +14,9 @@ This is the pipeline for processing the image data, tiling the images, preparing
 |4. [utils folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/utils)|4. [raster_indexing]()|
 |a. [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/concat_layers.py)|a. [indexRasters.py]()|
 |b. [geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/geofunctions.py)|b. [mosaicRasters.py]()
-|c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py)||
-|d. [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox2.py)||
-|e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py)||
+|c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py)|[selectParcelsByDamages.py]()|
+|d. [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox2.py)|[selectBuildingsByParcels.py]()|
+|e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py)|[createBuildingBoundingBoxes.py]()|
 |5. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_sorting/filterNoValues.py)|5. |
 |6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)|6. [tileTiff.py](https://github.com/DDS-Lab/hyak_files/blob/master/tileTiff.py)|
 |7. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/tif_index_geojson.py)|7. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/tif_index_geojson.py)|
