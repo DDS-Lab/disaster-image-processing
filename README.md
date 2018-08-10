@@ -11,7 +11,7 @@ This is the pipeline for processing the image data, tiling the images, preparing
 |b. [tiffDownloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/tiffDownloader.py)||
 |2. [sort_images.py](https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)||
 |3. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_utilities/compressTiffs.py)|2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_utilities/compressTiffs.py)|
-|4. [utils folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/utils)|4. [raster_indexing]()|
+|4. [utils folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/utils)|3. [raster_indexing]()|
 |a. [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/concat_layers.py)|a. [indexRasters.py]()|
 |b. [geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/geofunctions.py)|b. [mosaicRasters.py]()
 |c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py)|[selectParcelsByDamages.py]()|
