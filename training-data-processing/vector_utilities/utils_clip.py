@@ -3,21 +3,21 @@ import argparse
 import geopandas as gpd
 
 
-def ogrClip(clip_layer, input_layer, output_layer):
+def ogr_clip(clip_layer, input_layer, output_layer):
 
-    command = "ogr2ogr -clipsrc %s %s %s" % (clip_layer, output_layer, input_layer)
+    command = "ogr2ogr -clipsrc %s %s %s" % (
+        clip_layer, output_layer, input_layer)
     os.system(command)
 
 
+def gpd_clip(clip_layer, input_layer):
 
-def gpdClip(clip_layer, input_layer):
-
-    def readLayer(file):
+    def read_layer(file):
 
         return gpd.GeoDataFrame(gpd.read_file(file))
 
-    clip_layer = readLayer(clip_layer)
-    input_layer = readLayer(input_layer)
+    clip_layer = read_layer(clip_layer)
+    input_layer = read_layer(input_layer)
 
     output_file = gpd.overlay(input_layer, clip_layer, how='intersection')
 
@@ -40,9 +40,8 @@ if __name__ == "__main__":
     method = arguments.method
 
     if method == "OGR":
-        ogrClip(clip, input_layer, output_layer)
+        ogr_clip(clip, input_layer, output_layer)
     elif method == "GeoPandas":
-        gpdClip(clip, input_layer)
+        gpd_clip(clip, input_layer)
     else:
         print("Please pick a method!")
-

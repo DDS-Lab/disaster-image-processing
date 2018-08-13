@@ -1,17 +1,12 @@
 import os
 import argparse
-import glob
-
 
 
 def loadShapefile(shapefile, database, table, username, password):
 
-    command = "shp2pgsql -I -s 4269 %s %s | psql -U %s -p %s -d %s" % (shapefile, table, username, password, database)
+    command = "shp2pgsql -I -s 4269 %s %s | psql -U %s -p %s -d %s" % (
+        shapefile, table, username, password, database)
     os.system(command)
-
-
-
-    
 
 
 if __name__ == "__main__":

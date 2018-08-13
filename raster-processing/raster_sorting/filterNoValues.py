@@ -1,3 +1,7 @@
+"""
+
+"""
+
 import numpy as np
 from osgeo import gdal
 import argparse
@@ -6,6 +10,9 @@ import csv
 
 
 def is_raster_empty(file):
+    """
+
+    """
     raster = gdal.Open(file)
     raster_band = raster.GetRasterBand(1)
     band_array = np.array(raster_band.ReadAsArray())
@@ -21,6 +28,9 @@ def is_raster_empty(file):
 
 
 def are_rasters_empty(directory):
+    """
+
+    """
     total_list = []
 
     for file in os.listdir(directory):
@@ -37,21 +47,27 @@ def are_rasters_empty(directory):
 
 
 def create_file_list(list):
+    """
 
+    """
     with open("novalues_list.csv", "w") as f:
         wr = csv.writer(f)
         wr.writerows(list)
 
 
 def delete_files(file_list):
+    """
 
+    """
     for file in file_list:
         command = "rm %s" % file
         os.system(command)
 
 
 def delete_file(file):
+    """
 
+    """
     command = "rm %s" % file
     os.system(command)
 
@@ -64,7 +80,9 @@ def move_file(filename, folderpath):
 
 
 if __name__ == "__main__":
+    """
 
+    """
     parser = argparse.ArgumentParser(epilog='Type in directory of TIFs with\
     this script in the parent directory.')
     parser.add_argument('directory', help='The directory that the TIFs are in')
