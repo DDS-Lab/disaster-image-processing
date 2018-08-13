@@ -33,6 +33,9 @@ def get_img_links(page_url):
 
     no_return_error(links)
 
+    if not os.path.isdir('../../data'):
+        os.mkdir('../../data')
+
     if not os.path.isdir('../../data/download_list/'):
         os.mkdir('../../data/download_list/')
     os.chdir('../../data/download_list/')
