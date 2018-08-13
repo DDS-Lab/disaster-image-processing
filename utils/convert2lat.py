@@ -47,21 +47,28 @@ bounding_boxes = geo_json.copy()
 
 def getTransform(img_id, x_min, y_min, x_max, y_max):
     """
-        Define a function that transforms lat long coordinates into pixels for
+        Define a function that transforms pixel coordinates into lat long for
         a given image
     """
     path = join(tiffolder, img_id)
-    print(path)
     dataset = gdal.Open(path)
     transform = dataset.GetGeoTransform()
-    xOrigin = transform[0]
-    yOrigin = transform[3]
-    pixelWidth = transform[1]
-    pixelHeight = -transform[5]
-    xmin = max([0, int((x_min - xOrigin) / pixelWidth)])
-    ymin = max([0, int((yOrigin - y_min) / pixelHeight)])
-    xmax = max([0, int((x_max - xOrigin) / pixelWidth)])
-    ymax = max([0, int((yOrigin - y_max) / pixelHeight)])
+    width = dataset.RasterXSize
+    height = dataset.RasterYSize
+    minx_tif = transform[0]
+    miny_tif = transform[3] + width * transform[4] + height * transform[5]
+    maxx_tif = transform[0] + width * transform[1] + height * transform[2]
+    maxy_tif = transform[3]
+    xmin = ((maxx_tif - minx_tif) / width * x_min) + minx_tif
+    xmax = ((maxx_tif - minx_tif) / width * x_max) + minx_tif
+    ymin = ((maxy_tif - miny_tif) / width * y_min) + miny_tif
+    ymax = ((maxy_tif - miny_tif) / width * y_max) + miny_tif
+    #xmin = max([0, int((x_min - minx_tif) / pixelWidth)])
+    #ymin = max([0, int((miny_tif - y_min) / pixelHeight)])
+    #xmax = max([0, int((x_max - minx_tif) / pixelWidth)])
+    #ymax = max([0, int((miny_tif - y_max) / pixelHeight)])
+    print(minx_tif, miny_tif, maxx_tif, maxy_tif)
+    print(xmin, ymin, xmax, ymax)
     return xmin, ymin, xmax, ymax
 
 
@@ -70,24 +77,24 @@ Add to the input geojson a blank column that takes the pixel coordinates of
 the bounding box
 """
 
-geo_json['bb'] = None
+geo_json['latlong'] = None
 for index, entry in bounding_boxes.iterrows():
     """
         For every entry in the .geojson with bounding boxes, add to the 'bb'
         column a conversion from lat long to their 'pixel' coordinates
         according to their image (smalltif id)
     """
-    min_max_coords = [entry['geometry']]
+    bounds = [entry['pixels']]
     # print(entry['catalog_id'])
-    if min_max_coords[0].type == 'MultiPolygon':
-            allparts = [p.buffer(0) for p in min_max_coords[0]]
-            min_max_coords[0] = cascaded_union(allparts)
-    x, y = min_max_coords[0].exterior.coords.xy
+    #if bounds[0].type == 'MultiPolygon':
+    #        allparts = [p.buffer(0) for p in min_max_coords[0]]
+    #        min_max_coords[0] = cascaded_union(allparts)
+    x_min, y_min, x_max, y_max = min_max_coords[0]
     # print(x,y)
-    x_min = min(x)
-    y_min = min(y)
-    x_max = max(x)
-    y_max = max(y)
+    #x_min = min(x)
+    #y_min = min(y)
+    #x_max = max(x)
+    #y_max = max(y)
     # print(x_min, y_min, x_max, y_max)
     tif_id = entry['image']
     # print('')
@@ -97,6 +104,6 @@ for index, entry in bounding_boxes.iterrows():
     else:
         continue
     out = getTransform(tif_id, x_min, y_max, x_max, y_min)
-    geo_json.loc[index, 'bb'] = str(out)
+    geo_json.loc[index, 'latlong'] = str(out)
 
 geo_json.to_file(sys.argv[3], driver='GeoJSON')
