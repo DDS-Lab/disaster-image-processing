@@ -8,6 +8,17 @@ x_translation, y_translation = int(sys.argv[3]), int(sys.argv[4])
 img_x_size, img_y_size = int(sys.argv[5]), int(sys.argv[6])
 pixel_column_name = sys.argv[7]
 
+def stripper(x):
+	return x.strip().strip("'")
+
+# Reformat Andrew's formatting of BIG_TIF_ID
+def testBounds(input_path, output_path):
+	dater = pd.read_csv(BigTifTranslation, engine='python')
+	hey = dater['BIG_TIF_ID'].copy()
+	dater['BIG_TIF_ID'] = hey.apply(stripper)
+	dater.to_csv(output_path)
+
+#
 def testBounds(pt, translate, bound_pxl):
 	new_pt = pt + translate
 	if new_pt > bound_pxl:
@@ -49,11 +60,5 @@ def translatePixels(input_path, x_translation, y_translation, img_x_size, img_y_
 def merge(BigTifTranslation, input_geojson, output_path):
 	TranslationData = pd.read_csv(BigTifTranslation, engine='python')
 	input_geo = gpd.read_file(input_geojson)
-	end = pd.merge(input_geo, TranslationData, on='BIG_TIF_ID', how='outer')
+	end = pd.merge(input_geo, TranslationData, on='BIG_TIF_ID', how='inner')
 	end.to_file(output_path, driver='GeoJSON')
-
-
-
-
-
-
