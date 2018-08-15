@@ -9,7 +9,7 @@ This is the pipeline for processing the image data, tiling the images, preparing
 | DigitalGlobe | NOAA |
 | --------------------- | --------------------|
 |1. [digitalglobe_image_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/scripts/digitalglobe_image_downloader)|1. [downloadTiffs.sh]()|
-|1.a. [scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/automatic-image-downloader/scripts/scraper.py)|2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_utilities/compressTiffs.py)|
+|1.a. [digitalglobe_scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_scraper.py)|2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_utilities/compressTiffs.py)|
 |1.b. [tiffDownloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/automatic-image-downloader/automatic-image-downloader/automatic_downloader/tiffDownloader.py)|3. [raster_indexing]()|
 |1.c. [sort_images.py](https://github.com/DDS-Lab/harvey-data-processing/blob/script_cleaning/band_sorting/sort_images.py)|3.a. [indexRasters.py]()|
 |2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_utilities/compressTiffs.py)|3.b. [mosaicRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/raster-processing/raster_mosaicking/mosaicRasters.py)|
