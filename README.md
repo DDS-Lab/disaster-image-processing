@@ -42,44 +42,35 @@ Scrape the image files from source websites and save them in a folder.  For Digi
 
 Takes image files.  For DigitalGlobe this takes 3 TB and compresses to 60 GB.
 
-### 3. Processing images
+### 3. Processing image files
 
-For Digital Globe:
-
-[concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/concat_layers.py) takes any number of shapefiles as arguments and outputs a merged
-
-[geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/geofunctions.py)
-
-[shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox.py)
-
-[shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_boundingbox2.py)
-
-[shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/utils/shp_buffer.py) transform lat long coordinates into pixels for a given image and can input a shapefile and creates a geojson with .00015 buffer around bounding boxes of each feature
+Apply appropriate utility script as necessary based on observations of the data.
 
 ### 4. Tile images
 
-Clip the big tif images into smaller tiles (2048 x 2048) from left to right and top to bottom including a csv of the lat long ranges for each tif image
+Clip the big tif images into smaller tiles (2048 x 2048) from left to right and top to bottom including a csv of the lat long ranges for each tif image.
 
 ### 5. Index tiles to geojson
 
-From the csv of lat long ranges per tif image and the geojson file of lat longs of bounding boxes with attached tif id produce a geojson of pixel ranges per bounding box with small tif id
+From the csv of lat long ranges per tif image and the geojson file of lat longs of bounding boxes with attached tif id produce a geojson of pixel ranges per bounding box with small tif id.
 
 ### 6. Convert lat long to pixel coordinates
 
-SSD requires the training data input as pixel coordinates
+SSD requires the training data input as pixel coordinates.
 
 ### 7. Split training data
 
-Split the images and geojson file into training, validation and test subsets.  8:1:1
+Split the images and geojson file into training, validation and test subsets (8:1:1).
 
 ### 8. Debug dataset
 
-Use ipython notebook to plot bounding boxes over the images (tiff files) to check for accuracy, render the bounding boxes over the tiff files to manually inspect, record bad labels, remove those bounding boxes from the geojson file
+Use ipython notebook to plot bounding boxes over the images (tiff files) to check for accuracy, render the bounding boxes over the tiff files to manually inspect, record bad labels, remove those bounding boxes from the geojson file.
 
 ### 9. Data augmentation
 
-Shift, flip and rotate the images as a way to add more training data
+Shift, flip and rotate the images as a way to add more training data.
 
 ### 10. Feed training data to algorithm
-Prepare input for the network
+
+Prepare input for the network.
 
