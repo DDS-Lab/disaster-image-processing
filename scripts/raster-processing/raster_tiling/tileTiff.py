@@ -5,7 +5,7 @@ import os
 def tile_tiff(tiff_file):
 
     command0 = "mkdir image_tiles"
-    command1 = "gdal_retile.py -v -r bilinear -levels 1 -ps 2048 2048 -co\
+    command1 = "gdal_retile.py -v -r bilinear -levels 1 -pyramidOnly -ps 2048 2048 -co\
      TILED=YES -co COMPRESS=JPEG -targetDir image_tiles " + tiff_file
     if os.path.exists("image_tiles"):
         os.system(command1)
