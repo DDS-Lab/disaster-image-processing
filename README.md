@@ -36,7 +36,15 @@ This is the pipeline for processing the image data, tiling the images, preparing
 
 ### 1. Download data
 
-Scrape the image files from source websites and save them in a folder.  For DigitalGLobe sorting the image files into 3 band and 1 band folders is required.
+Scrape the image files from source websites and save them in a folder.  For DigitalGLobe sorting the image files into 3 band and 1 band folders is required. 
+
+***The following instructions are for NOAA only:***
+
+Run `sudo bash downloadTiffs.sh` on Ubuntu to download the image files after installing the provided file.
+
+All the files combined will be around 60GB; it is recommended to use a hard drive to ensure that you have enough storage. If you have not used Ubuntu before on your device, you will need to run `sudo apt-get install wget` on Ubuntu.
+
+You may need to delete carriage return characters if the files are not being downloaded properly (e.g. the files are downloaded instantly instead of taking around 5-6 minutes). To do this, run `sed "s/$(printf '\r')\$//" downloadTiffs.sh > downloadTiffs2.sh && mv downloadTiffs2.sh downloadTiffs.sh` on Ubuntu.
 
 ### 2. Compress images
 
