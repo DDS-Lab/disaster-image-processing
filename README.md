@@ -38,17 +38,33 @@ This is the pipeline for processing the image data, tiling the images, preparing
 
 Scrape the image files from source websites and save them in a folder.  For DigitalGLobe sorting the image files into 3 band and 1 band folders is required. 
 
-***The following instructions are for NOAA only:***
+**The following instructions are for NOAA only:**
 
 Run `sudo bash downloadTiffs.sh` on Ubuntu to download the image files after installing the provided file.
 
-All the files combined will be around 60GB; it is recommended to use a hard drive to ensure that you have enough storage. If you have not used Ubuntu before on your device, you will need to run `sudo apt-get install wget` on Ubuntu.
+All the files combined will be around 60GB; it is recommended to use a hard drive to ensure that you have enough storage. If you have not used Ubuntu before on your device, you will need to run `sudo apt-get install wget` in order to be able to run the file.
 
-You may need to delete carriage return characters if the files are not being downloaded properly (e.g. the files are downloaded instantly instead of taking around 5-6 minutes). To do this, run `sed "s/$(printf '\r')\$//" downloadTiffs.sh > downloadTiffs2.sh && mv downloadTiffs2.sh downloadTiffs.sh` on Ubuntu.
+You may need to delete carriage return characters if the files are not being downloaded properly (e.g. the files are downloaded instantly). To do this, run `sed "s/$(printf '\r')\$//" downloadTiffs.sh > downloadTiffs2.sh && mv downloadTiffs2.sh downloadTiffs.sh` on Ubuntu.
+
+Each file takes roughly 5-7 minutes to download; please be patient!
 
 ### 2. Compress images
 
 Takes image files.  For DigitalGlobe this takes 3 TB and compresses to 60 GB.
+
+You will need Miniconda in your Ubuntu terminal in order to run Python files (we chose Miniconda over Anaconda since Miniconda does not come with any Python packages, which saves us file space which would otherwise be taken up by unnecessary packages). Please go [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions on how to install Miniconda on Ubuntu. We recommend downloading the latest version.
+
+Once you have installed Miniconda, you must take the following steps to activate it in Ubuntu:
+
+- Run `sudo -s`.
+- Enter the password associated with your account in Ubuntu.
+- **First-time only:** Run `export PATH=”root/miniconda3/bin:$PATH”` in the terminal. This will ensure that Ubuntu points to your Miniconda directory.
+
+You then must install the GDAL package (preferably in a virtual environment). To set up your virtual environment, run `conda create -n [env_name] python=[version]` (we recommend Python 3.9). You can then activate it anytime by running `source activate [env_name]` and disable it with `source deactivate`.
+
+Install the GDAL package by running `conda install -c conda-forge gdal` while your virtual environment is active.
+
+(Currently about to test the Python file after installing all tif files)
 
 ### 3. Processing image files
 
