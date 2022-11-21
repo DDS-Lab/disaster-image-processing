@@ -8,28 +8,28 @@ This is the pipeline for processing the image data, tiling the images, preparing
 
 | DigitalGlobe | NOAA |
 | --------------------- | --------------------|
-|1. [digitalglobe_image_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/scripts/digitalglobe_image_downloader)|1. [downloadTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/jminahn/scripts/raster-processing/raster_downloading/downloadTiffs.sh)|
-|1.a. [digitalglobe_scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_scraper.py)|2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.py)|
-|1.b. [digitalglobe_tiff_Downloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_tiff_downloader.py)|3.a. [indexRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_indexing/indexRasters.py)|
-|1.c. [filterOneBands.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_sorting/filterOneBands.py)|3.b. [mosaicRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_mosaicking/mosaicRasters.py)|
-|2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.py)|3.c. [selectParcelsByDamages.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/selectParcelsByDamages.py)|
-|3.a. [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/concat_layers.py)|3.d. [selectBuildingsByParcels.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/selectBuildingsByParcels.py)|
-|3.b. [geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/geofunctions.py)|3.e. [createBuildingBoundingBoxes.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/createBuildingBoundingBoxes.py)|
-|3.c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_boundingbox.py)|4. [tileTiff.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_tiling/tileTiff.py)|
-|3.d. [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_boundingbox2.py)|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|
-|3.e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_buffer.py)|6. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|
-|3.f. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_sorting/filterNoValues.py)|7.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|
-|4. [tileTiff.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_tiling/tileTiff.py)|7.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|
-|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|8.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|
-|6. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|8.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|
-|7.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|8.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|
-|7.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|8.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|
-|8.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|8.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|
-|8.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|8.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|
-|8.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|9. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|
-|8.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|10.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)|
-|8.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|10.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|
-|8.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)||
+|1. [digitalglobe_image_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/scripts/digitalglobe_image_downloader)|1. [downloadTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_downloading/downloadTiffs.sh)|
+|1.a. [digitalglobe_scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_scraper.py)|2.a. [compressTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.sh)|
+|1.b. [digitalglobe_tiff_Downloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_tiff_downloader.py)|2.b. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.py)|
+|1.c. [filterOneBands.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_sorting/filterOneBands.py)|3.a. [indexRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_indexing/indexRasters.py)|
+|2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.py)|3.b. [mosaicRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_mosaicking/mosaicRasters.py)|
+|3.a. [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/concat_layers.py)|3.c. [selectParcelsByDamages.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/selectParcelsByDamages.py)|
+|3.b. [geofunctions.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/geofunctions.py)|3.d. [selectBuildingsByParcels.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/selectBuildingsByParcels.py)|
+|3.c. [shp_boundingbox.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_boundingbox.py)|3.e. [createBuildingBoundingBoxes.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/createBuildingBoundingBoxes.py)|
+|3.d. [shp_boundingbox2.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_boundingbox2.py)|4. [tileTiff.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_tiling/tileTiff.py)|
+|3.e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_buffer.py)|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|
+|3.f. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_sorting/filterNoValues.py)|6. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|
+|4. [tileTiff.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_tiling/tileTiff.py)|7.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|
+|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|7.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|
+|6. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|8.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|
+|7.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|8.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|
+|7.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|8.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|
+|8.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|8.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|
+|8.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|8.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|
+|8.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|8.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|
+|8.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|9. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|
+|8.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|10.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)|
+|8.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|10.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)||
 |9. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)||
 |10.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)||
 |10.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)||
@@ -52,6 +52,8 @@ Each file takes roughly 5-7 minutes to download; please be patient!
 
 Takes image files.  For DigitalGlobe this takes 3 TB and compresses to 60 GB.
 
+Please install both files and ensure that they are in the same directory. You will only need to run `compressTiffs.sh`, as it will call `compressTiffs.py`.
+
 You will need Miniconda in your Ubuntu terminal in order to run Python files (we chose Miniconda over Anaconda since Miniconda does not come with any Python packages, which saves us file space which would otherwise be taken up by unnecessary packages). Please go [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for instructions on how to install Miniconda on Ubuntu. We recommend downloading the latest version.
 
 Once you have installed Miniconda, you must take the following steps to activate it in Ubuntu:
@@ -64,7 +66,7 @@ You then must install the GDAL package (preferably in a virtual environment). To
 
 Install the GDAL package by running `conda install -c conda-forge gdal` while your virtual environment is active.
 
-(Currently about to test the Python file after installing all tif files)
+You may get a syntax error when you run `downloadTiffs.sh`. To fix this, run `vi compressTiffs.sh` -> `:set ff=unix` -> `wq!`
 
 ### 3. Processing image files
 
