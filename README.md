@@ -8,9 +8,9 @@ This is the pipeline for processing the image data, tiling the images, preparing
 
 | DigitalGlobe | NOAA |
 | --------------------- | --------------------|
-|1. [digitalglobe_image_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/scripts/digitalglobe_image_downloader)|1. [downloadTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_downloading/downloadTiffs.sh)|
-|1.a. [digitalglobe_scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_scraper.py)|2.a. [compressTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.sh)|
-|1.b. [digitalglobe_tiff_Downloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_tiff_downloader.py)|2.b. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.py)|
+|1. [digitalglobe_image_downloader folder](https://github.com/DDS-Lab/disaster-image-processing/tree/master/scripts/digitalglobe_image_downloader)|1. [downloadTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/jminahn/scripts/raster-processing/raster_downloading/downloadTiffs.sh)|
+|1.a. [digitalglobe_scraper.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_scraper.py)|2.a. [compressTiffs.sh](https://github.com/DDS-Lab/disaster-image-processing/blob/jminahn/scripts/raster-processing/raster_utilities/compressTiffs.sh)|
+|1.b. [digitalglobe_tiff_Downloader.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/digitalglobe_image_downloader/digitalglobe_tiff_downloader.py)|2.b. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/jminahn/scripts/raster-processing/raster_utilities/compressTiffs.py)|
 |1.c. [filterOneBands.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_sorting/filterOneBands.py)|3.a. [indexRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_indexing/indexRasters.py)|
 |2. [compressTiffs.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_utilities/compressTiffs.py)|3.b. [mosaicRasters.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_mosaicking/mosaicRasters.py)|
 |3.a. [concat_layers.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/concat_layers.py)|3.c. [selectParcelsByDamages.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/training-data-processing/training_set_creation/selectParcelsByDamages.py)|
@@ -67,6 +67,8 @@ You then must install the GDAL package (preferably in a virtual environment). To
 Install the GDAL package by running `conda install -c conda-forge gdal` while your virtual environment is active.
 
 You may get a syntax error when you run `downloadTiffs.sh`. To fix this, run `vi compressTiffs.sh` -> `:set ff=unix` -> `wq!`
+
+`compressTiffs.sh` will automatically go to the folder where the tar files are located, so ensure that the Shell and Python files are located in the directory directly before the `noaa_images` folder, which should have been created when you ran `downloadTiffs.sh`.
 
 ### 3. Processing image files
 
