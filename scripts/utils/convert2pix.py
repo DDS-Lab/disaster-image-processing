@@ -33,16 +33,9 @@ def getTransform(img_id, x_min, y_min, x_max, y_max):
   ymax = max([0, int((yOrigin - y_max) / pixelHeight)])
   return xmin, ymin, xmax, ymax
 
-# Actual transformation happens here
-
-# Double-check to see if all multipolygons are of size 1
 gdf_test['bb'] = None
 for index, entry in gdf_test.iterrows():
   curr_coords = list(gdf['geometry'].iloc[index].geoms)
-  # if min_max_coords[0].type == 'MultiPolygon':
-    # Is there a reason to buffer by 0?
-    # allparts = [p.buffer(0) for p in min_max_coords[0]]
-    # min_max_coords[0] = cascaded_union(allparts)
   x, y = curr_coords[0].exterior.coords.xy
   x_min = min(x)
   y_min = min(y)
