@@ -1,6 +1,6 @@
 # disaster-image-processing
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DDS-Lab/disaster-image-processing/2022-update?urlpath=https%3A%2F%2Fgithub.com%2FDDS-Lab%2Fdisaster-image-processing%2Fblob%2F2022-update%2FChipPlotting.ipynb)
+[![Binder](https://mybinder.org/v2/gh/DDS-Lab/disaster-image-processing/34dbdea7b2d6f99db1130fa3f103cd0b4915fe7f?urlpath=lab%2Ftree%2FChipPlotting.ipynb)
 
 For more information on this project, please visit the [project website](https://dds-lab.github.io/disaster-damage-detection/).
 
