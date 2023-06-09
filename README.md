@@ -1,7 +1,5 @@
 # disaster-image-processing
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DDS-Lab/disaster-image-processing/2022-update?labpath=%22C%3A%5CUsers%5Cjungm%5CAppData%5CLocal%5CPackages%5CCanonicalGroupLimited.Ubuntu_79rhkp1fndgsc%5CLocalState%5Crootfs%5Chome%5Cjminahn%5CBuildingMarker.ipynb%22)
-
 For more information on this project, please visit the [project website](https://dds-lab.github.io/disaster-damage-detection/).
 
 This is the pipeline for processing the image data, tiling the images, preparing the training, validation and test data and training the model in tensorflow.  There are separate processes for DigitalGlobe data and for NOAA data.  More details on the data used for this project can be found [here](https://github.com/DDS-Lab/disaster-image-processing/blob/master/data.md). 
@@ -22,19 +20,19 @@ This is the pipeline for processing the image data, tiling the images, preparing
 |3.e. [shp_buffer.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/shp_buffer.py)|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|
 |3.f. [filterNoValues.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_sorting/filterNoValues.py)|6.a. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|
 |4. [tileTiff.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/raster-processing/raster_tiling/tileTiff.py)|6.b. [BuildingMarker.ipynb](https://github.com/DDS-Lab/disaster-image-processing/blob/2022-update/notebooks/raster-processing/BuildingMarker.ipynb)|
-|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|7. [TifChipper.ipynb](https://github.com/DDS-Lab/disaster-image-processing/blob/2022-update/notebooks/raster-processing/TifChipper.ipynb)|
-|6. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|8.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|
-|7.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|8.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|
-|7.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|9.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|
-|8.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|9.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|
-|8.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|9.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|
-|8.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|9.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|
-|8.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|9.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|
-|8.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|9.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|
-|8.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|10. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|
-|9. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|11.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)||
-|10.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)|11.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)||
-|10.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)||
+|5. [tif_index_geojson.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/tif_index_geojson.py)|7.a. [chipImage.py](https://github.com/DDS-Lab/disaster-image-processing/blob/2022-update/chipImage.py)|
+|6. [convert2pix.py](https://github.com/DDS-Lab/disaster-image-processing/blob/master/scripts/utils/convert2pix.py)|7.b. [ChipPlotting.ipynb](https://github.com/DDS-Lab/disaster-image-processing/blob/2022-update/ChipPlotting.ipynb)|
+|7.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|8.a. [train_test_split.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/train_test_split.py)|
+|7.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|8.b. [split_geojson.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/split_geojson.py)|
+|8.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|9.a. [plot_bbox.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox.py)|
+|8.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|9.b. [plot_bbox_uid_small.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/plot_bbox_uid_small.py)|
+|8.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|9.c. [identify_bad_lab.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/identify_bad_labels.py)|
+|8.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|9.d. [delete_bad_labels.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/delete_bad_labels.py)|
+|8.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|9.e. [fix_bbox.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/fix_bbox.ipynb)|
+|8.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|9.f. [xView_Processing.ipynb](https://github.com/DDS-Lab/harvey_data_process/blob/master/xView_Processing.ipynb)|
+|9. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|10. [aug_util.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/aug_util.py)|||
+|10.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)|11.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)||
+|10.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|11.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|
 
 ### 1. Download data
 
