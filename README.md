@@ -1,5 +1,7 @@
 # disaster-image-processing
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DDS-Lab/disaster-image-processing/2022-update?labpath=%22C%3A%5CUsers%5Cjungm%5CAppData%5CLocal%5CPackages%5CCanonicalGroupLimited.Ubuntu_79rhkp1fndgsc%5CLocalState%5Crootfs%5Chome%5Cjminahn%5CBuildingMarker.ipynb%22)
+
 For more information on this project, please visit the [project website](https://dds-lab.github.io/disaster-damage-detection/).
 
 This is the pipeline for processing the image data, tiling the images, preparing the training, validation and test data and training the model in tensorflow.  There are separate processes for DigitalGlobe data and for NOAA data.  More details on the data used for this project can be found [here](https://github.com/DDS-Lab/disaster-image-processing/blob/master/data.md). 
