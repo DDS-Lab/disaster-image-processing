@@ -11,4 +11,5 @@ dependencies:
   - matplotlib=3.7.1
   - pip:
       - tensorflow==2.12.0
+      - tensorflow_datasets==4.9.2
       - Pillow==9.5.0
