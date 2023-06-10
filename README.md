@@ -1,12 +1,18 @@
 # disaster-image-processing
 
+## Interactive Jupyter Notebooks
+
+### Full Image Bounding Box Visualization
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DDS-Lab/disaster-image-processing/34dbdea7b2d6f99db1130fa3f103cd0b4915fe7f?urlpath=lab%2Ftree%2Fnotebooks%2Fraster-processing%2FBuildingMarker.ipynb)
+
+### Chip Bounding Box Visualization
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DDS-Lab/disaster-image-processing/34dbdea7b2d6f99db1130fa3f103cd0b4915fe7f?urlpath=lab%2Ftree%2FChipPlotting.ipynb)
 
 For more information on this project, please visit the [project website](https://dds-lab.github.io/disaster-damage-detection/).
 
 This is the pipeline for processing the image data, tiling the images, preparing the training, validation and test data and training the model in tensorflow.  There are separate processes for DigitalGlobe data and for NOAA data.  More details on the data used for this project can be found [here](https://github.com/DDS-Lab/disaster-image-processing/blob/master/data.md). 
 
-### Process Flow
+## Process Flow
 
 | DigitalGlobe | NOAA |
 | --------------------- | --------------------|
