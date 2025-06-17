@@ -42,6 +42,7 @@ This is the pipeline for processing the image data, tiling the images, preparing
 |10.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)|11.a. [process_wv_ms_test.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_test.py)||
 |10.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|11.b. [process_wv_ms_train.py](https://github.com/DDS-Lab/harvey_data_process/blob/master/process_wv_ms_train.py)|
 
+
 ### 1. Download data
 
 Scrape the image files from source websites and save them in a folder.  For DigitalGLobe sorting the image files into 3 band and 1 band folders is required. 
